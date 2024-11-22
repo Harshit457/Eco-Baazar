@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import {
   FaUser,
   FaSearch,
@@ -8,7 +10,10 @@ import {
 } from "react-icons/fa";
 function SideNavbar() {
   const [isOpen, setIsOpen] = React.useState(true);
-
+  const navigate = useNavigate();
+  const goToLogin = () => {
+    navigate("/login"); // Navigates to the "About" page
+  };
   return (
     <div className="flex">
       {/* Sidebar */}
@@ -22,16 +27,18 @@ function SideNavbar() {
         </button>
 
         <div className="flex flex-col items-center space-y-8 mt-40">
-          <FaUser
-            className="text-gray-800 cursor-pointer hover:text-purple-500"
-            size={24}
-          />
+          <button onClick={goToLogin}>
+            <FaUser
+              className="text-gray-800 cursor-pointer hover:text-purple-500"
+              size={24}
+            />
+          </button>
           <FaSearch
             className="text-gray-800 cursor-pointer hover:text-purple-500"
             size={24}
           />
           <FaShoppingBag
-            className="text-purple-500 cursor-pointer hover:text-purple-700"
+            className="text-gray-800 cursor-pointer hover:text-purple-500"
             size={24}
           />
           <FaGlobe

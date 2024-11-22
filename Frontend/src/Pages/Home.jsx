@@ -3,12 +3,13 @@ import first from "../assets/1.jpeg";
 import SideNavbar from "../components/SideNavbar";
 import seven from "../assets/7.jpeg";
 import eight from "../assets/8.jpeg";
-
+import Bottombar from "../components/Bottombar";
 import ss from "../assets/ss.png";
 import fourteen from "../assets/14.jpeg";
+
 function Home() {
   return (
-    <div className=" bg-gray-100">
+    <div className=" bg-gray-100 overflow-hidden">
       <div className="flex h-screen overflow-hidden">
         {/* Side Navbar */}
         <div className="w-14 sticky">
@@ -48,7 +49,7 @@ function Home() {
       </div>
 
       <div className="pl-20 pt-10 bg-gray-100 h-auto overflow-y-hidden ">
-        <div className="grid grid-cols-2 grid-rows-2 border-2 border-red-600  w-full ">
+        <div className="grid grid-cols-2 grid-rows-2 -600  w-full ">
           {/* Men's Section */}
           <div
             className="relative bg-cover bg-center bg-no-repeat row-span-1  "
@@ -101,7 +102,8 @@ function Home() {
           </div>
         </div>
       </div>
-      <div>
+
+      <div className="mt-20">
         <div className="flex justify-center items-center h-40 text-2xl text-blue-900 font-semibold italic">
           “My approach to sustainability is first and foremost about quality ”
         </div>
@@ -112,28 +114,40 @@ function Home() {
           >
             <div className="inset-0 bg-black/40 transition-opacity duration-500 opacity-0 hover:opacity-100 w-full h-full flex justify-center  items-center">
               <div>
-                <div className="text-3xl flex justify-center">Quality</div>
-                <div className="text-xl flex justify-center mt-2 pl-20 pr-20">
+                <div className="text-3xl flex justify-center text-white">
+                  Quality
+                </div>
+                <div className="text-xl flex justify-center mt-2 pl-20 pr-20 text-white">
                   Made with the mindset or keeping the highest quality standards
                 </div>
               </div>
             </div>
           </div>
-          <div className="bg-green-400 row-span-1 col-span-1 ">
+          <div
+            className="bg-green-400 row-span-1 col-span-1 "
+            style={{ backgroundImage: `url(${eight})` }}
+          >
             <div className="inset-0 bg-black/40 transition-opacity duration-500 opacity-0 hover:opacity-100 w-full h-full flex justify-center items-center text-xl ">
               <div>
-                <div className="text-3xl flex justify-center">Quality</div>
-                <div className="text-xl flex justify-center mt-2 pl-20 pr-20">
+                <div className="text-3xl flex justify-center text-white">
+                  Quality
+                </div>
+                <div className="text-xl flex justify-center mt-2 pl-20 pr-20 text-white">
                   Made with the mindset or keeping the highest quality standards
                 </div>
               </div>
             </div>
           </div>
-          <div className="bg-red-400 row-span-3 col-span-1 ">
+          <div
+            className="bg-red-400 row-span-3 col-span-1 "
+            style={{ backgroundImage: `url(${seven})` }}
+          >
             <div className="inset-0 bg-black/40 transition-opacity duration-500 opacity-0 hover:opacity-100 w-full h-full flex justify-center  items-center">
               <div>
-                <div className="text-3xl flex justify-center">Quality</div>
-                <div className="text-xl flex justify-center mt-2 pl-20 pr-20">
+                <div className="text-3xl flex justify-center text-white">
+                  Quality
+                </div>
+                <div className="text-xl flex justify-center mt-2 pl-20 pr-20 text-white">
                   Made with the mindset or keeping the highest quality standards
                 </div>
               </div>
@@ -142,11 +156,16 @@ function Home() {
           <div className="row-span-1 col-span-1 flex justify-center items-center text-3xl  ">
             Why Choose Us?
           </div>
-          <div className="bg-cyan-300 row-span-1 col-span-2 ">
+          <div
+            className="bg-cyan-300 row-span-1 col-span-2 "
+            style={{ backgroundImage: `url(${seven})` }}
+          >
             <div className="inset-0 bg-black/40 transition-opacity duration-500 opacity-0 hover:opacity-100 w-full h-full flex justify-center  items-center">
               <div>
-                <div className="text-3xl flex justify-center">Quality</div>
-                <div className="text-xl flex justify-center mt-2 pl-20 pr-20">
+                <div className="text-3xl flex justify-center  text-white">
+                  Quality
+                </div>
+                <div className="text-xl flex justify-center mt-2 pl-20 pr-20 text-white">
                   Made with the mindset or keeping the highest quality standards
                 </div>
               </div>
@@ -154,6 +173,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <Bottombar></Bottombar>
     </div>
   );
 }
