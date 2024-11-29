@@ -1,6 +1,20 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-function FirstCard({ heading, content, bt }) {
+function FirstCard({ heading, content, bt, abt }) {
+  const navigate = useNavigate();
+  const navi = () => {
+    if (abt == "community") {
+      navigate("/community");
+    }
+    if (abt == "privacy") {
+      navigate("/privacy");
+    }
+    if (abt == "contact") {
+      navigate("/contact");
+    }
+  };
+
   return (
     <div className="bg-white flex justify-center items-center  mt-20  rounded-2xl shadow-lg shadow-gray-400">
       <div>
@@ -11,7 +25,10 @@ function FirstCard({ heading, content, bt }) {
           {content}
         </div>
         <div className="flex justify-center">
-          <button className="flex justify-center  bg-green-950 text-white w-3/6 h-8 items-center rounded-2xl mt-6">
+          <button
+            onClick={navi}
+            className="flex justify-center  bg-green-950 text-white w-3/6 h-8 items-center rounded-2xl mt-6"
+          >
             {bt}
           </button>
         </div>

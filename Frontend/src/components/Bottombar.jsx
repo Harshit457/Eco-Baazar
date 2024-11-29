@@ -52,6 +52,7 @@ function Bottombar() {
               "Explore our sustainable products at EcoBazaar Together, let’s make a difference! "
             }
             bt={"Visit our Community"}
+            abt={"community"}
           ></FirstCard>
           <FirstCard
             heading={"Contact Us"}
@@ -59,6 +60,7 @@ function Bottombar() {
               "How can we help you today? We’re here to provide you with the best service possible"
             }
             bt={"Get in touch"}
+            abt={"contact"}
           ></FirstCard>
           <FirstCard
             heading={"About Us"}
@@ -66,6 +68,7 @@ function Bottombar() {
               "We are a team of eco-enthusiasts who want to make a difference in the world"
             }
             bt={"know about us"}
+            abt={"privacy"}
           ></FirstCard>
         </div>
       </div>

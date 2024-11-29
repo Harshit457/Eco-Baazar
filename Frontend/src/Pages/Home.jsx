@@ -6,8 +6,13 @@ import eight from "../assets/8.jpeg";
 import Bottombar from "../components/Bottombar";
 import ss from "../assets/ss.png";
 import fourteen from "../assets/14.jpeg";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  const navigate = useNavigate();
+  const goTologin = () => {
+    navigate("/login");
+  };
   return (
     <div className=" bg-gray-100 overflow-hidden">
       <div className="flex h-screen overflow-hidden">
@@ -28,7 +33,10 @@ function Home() {
             <br />
           </div>
 
-          <button className="text-3xl flex justify-center items-center bg-white text-green-800 w-72 h-16 rounded-full mt-8">
+          <button
+            onClick={goTologin}
+            className="text-3xl flex justify-center items-center bg-white text-green-800 w-72 h-16 rounded-full mt-8"
+          >
             Shop Now
           </button>
         </div>

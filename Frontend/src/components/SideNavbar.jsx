@@ -14,6 +14,15 @@ function SideNavbar() {
   const goToLogin = () => {
     navigate("/login"); // Navigates to the "About" page
   };
+  const goToSearch = () => {
+    navigate("/search");
+  };
+  const goToCommunity = () => {
+    navigate("/community");
+  };
+  const goToproduct = () => {
+    navigate("/Product");
+  };
   return (
     <div className="flex">
       {/* Sidebar */}
@@ -33,18 +42,28 @@ function SideNavbar() {
               size={24}
             />
           </button>
-          <FaSearch
-            className="text-gray-800 cursor-pointer hover:text-purple-500"
-            size={24}
-          />
-          <FaShoppingBag
-            className="text-gray-800 cursor-pointer hover:text-purple-500"
-            size={24}
-          />
-          <FaGlobe
-            className="text-gray-800 cursor-pointer hover:text-purple-500"
-            size={24}
-          />
+          <button onClick={goToSearch}>
+            {" "}
+            <FaSearch
+              className="text-gray-800 cursor-pointer hover:text-purple-500"
+              size={24}
+            />
+          </button>
+          <button onClick={goToproduct}>
+            {" "}
+            <FaShoppingBag
+              className="text-gray-800 cursor-pointer hover:text-purple-500"
+              size={24}
+            />
+          </button>
+
+          <button onClick={goToCommunity}>
+            {" "}
+            <FaGlobe
+              className="text-gray-800 cursor-pointer hover:text-purple-500"
+              size={24}
+            />
+          </button>
         </div>
       </div>
 

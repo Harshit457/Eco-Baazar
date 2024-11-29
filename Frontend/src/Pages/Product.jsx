@@ -54,12 +54,13 @@ function Product() {
         </div>
       </div>
       <div className="flex w-screen h-auto pl-36 pr-10 mt-10 ">
+        
         <ProductCard
           image={sixteen}
           detail={"Unisex Handbag"}
           price={"₹ 329"}
         ></ProductCard>
-        <ProductCard
+        <ProductCard 
           image={twentyone}
           detail={"Unisex T shirt"}
           price={"₹ 899"}
@@ -88,7 +89,7 @@ function Product() {
         ></ProductCard>
       </div>
       <div
-        className="h-[170vh]  bg-cover bg-no-repeat mt-10"
+        className="h-[300vh]  bg-cover bg-no-repeat mt-10"
         style={{ backgroundImage: `url(${twentytwo})` }}
       ></div>
       <div className="w-full flex flex-col items-center py-10 px-4 mt-10">
